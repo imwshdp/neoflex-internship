@@ -1,0 +1,32 @@
+.counter {
+  display: grid;
+  grid: auto-flow dense / 30px 1fr 30px;
+
+  width: 80%;
+  min-height: 30px;
+}
+
+.counterButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--second-active-color);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.counterButton svg {
+  width: 50%;
+  height: 50%;
+}
+
+.counter span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'SemiBold';
+  font-size: 17px;
+}

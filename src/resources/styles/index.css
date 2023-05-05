@@ -1,0 +1,68 @@
+@import url('resources/fonts/index.css');
+
+:root {
+  --main-color: #EAEAEA;
+  --white-color: #FFFFFF;
+  --gray-color: #838383;
+  --active-color: #FFA542;
+  --second-active-color: #FFCE7F;
+
+  --shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--main-color);
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+main>*:last-child {
+  margin-bottom: 30px;
+}
+
+svg {
+  fill: var(--gray-color);
+  transition: color .5s ease-in-out;
+}
+
+/* active colors */
+.active {
+  color: #838383;
+  cursor: default;
+
+  transition: color .5s ease-in-out;
+}
+
+.active svg {
+  fill: #585858;
+  transition: color .5s ease-in-out;
+}
+
+.activeColor {
+  color: var(--active-color);
+  transition: color .5s ease-in-out;
+}
+
+/* headings */
+h1 {
+  width: 100%;
+  padding: 20px 0;
+
+  font-family: 'SemiBold';
+  font-size: 20px;
+  color: var(--gray-color);
+}
