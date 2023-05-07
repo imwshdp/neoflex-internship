@@ -1,40 +1,44 @@
 import * as React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { RouteNames } from 'router';
 import useAppSelector from 'hooks/useAppSelector';
 
 import BasketIcon from 'resources/icons/BasketIcon';
-import FavouritesIcon from 'resources/icons/FavouritesIcon';
+import FavoritesIcon from 'resources/icons/FavoritesIcon';
 import css from './index.module.css';
 
 const Header: React.FC = () => {
-  const basketProductsList = useAppSelector(state => state.basket.basketProductsList);
-  const quantity = basketProductsList.length;
+	const basketProductsList = useAppSelector(
+		state => state.basket.basketProductsList
+	);
+	const navigate = useNavigate();
 
-  return (
-    <header id='#header' className={css.header}>
-      <Link to={RouteNames.SHOP_ROUTE}>
-        <span className={css.logo}>
-          QPICK
-        </span>
-      </Link>
-      
-      <div className={css.links}>
-        <NavLink to={RouteNames.SHOP_ROUTE}>
-          <div>
-            <FavouritesIcon />
-          </div>
-        </NavLink>
+	const quantity = basketProductsList.length;
 
-        <NavLink to={RouteNames.BASKET_ROUTE}>
-          <div>
-            {quantity > 0 && <div className={css.iconCounter}>{quantity}</div>}
-            <BasketIcon />
-          </div>
-        </NavLink>
-      </div>
-    </header>
-  );
-}
+	return (
+		<header className={css.header}>
+			<span
+				className={css.logo}
+				onClick={() => navigate(RouteNames.SHOP_ROUTE, { replace: true })}>
+				QPICK
+			</span>
+
+			<div className={css.links}>
+				<NavLink to={RouteNames.SHOP_ROUTE}>
+					<div>
+						<FavoritesIcon />
+					</div>
+				</NavLink>
+
+				<NavLink to={RouteNames.BASKET_ROUTE}>
+					<div>
+						{quantity > 0 && <div className={css.iconCounter}>{quantity}</div>}
+						<BasketIcon />
+					</div>
+				</NavLink>
+			</div>
+		</header>
+	);
+};
 
 export default Header;

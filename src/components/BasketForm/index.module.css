@@ -1,33 +1,33 @@
 .orderForm {
-  display: flex;
-  flex-flow: column nowrap;
-  height: fit-content;
+	display: flex;
+	flex-flow: column nowrap;
+	height: fit-content;
 
-  background: var(--white-color);
-  border-radius: 30px;
-  font-family: 'SemiBold';
-  box-shadow: var(--shadow);
+	background: var(--white-color);
+	border-radius: 30px;
+	font-family: 'SemiBold';
+	box-shadow: var(--shadow);
 }
 
 .totalPanel {
-  display: flex;
-  flex-flow: row nowrap;
-  height: 60px;
+	display: flex;
+	flex-flow: row nowrap;
+	height: 60px;
 
-  padding: 20px;
-  justify-content: space-between;
+	padding: 20px;
+	justify-content: space-between;
 
-  font-size: 15px;
+	font-size: 15px;
 }
 
 .confirmOrderButton {
-  background: black;
-  height: 60px;
+	background: black;
+	height: 60px;
 
-  border: none;
-  border-radius: 20px;
-  color: var(--white-color);
-  font-family: inherit;
-  font-size: 17px;
-  cursor: pointer;
+	border: none;
+	border-radius: 20px;
+	color: var(--white-color);
+	font-family: inherit;
+	font-size: 17px;
+	cursor: pointer;
 }

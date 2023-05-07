@@ -1,16 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit"
-import { ICategoriesState } from "./types";
+import { createSlice } from '@reduxjs/toolkit';
+import { ICategoriesState } from './types';
 
-import mockCategories from "resources/mock/categoriesData";
+import mockCategories from 'resources/mock/categoriesData';
 
 const initialState: ICategoriesState = {
-  categoriesList: mockCategories,
-}
+	categoriesList: mockCategories,
+};
 
 const categoriesSlice = createSlice({
-  name: 'categories',
-  initialState,
-  reducers: {}
-})
+	name: 'categories',
+	initialState,
+	reducers: {},
+});
 
 export default categoriesSlice.reducer;

@@ -1,19 +1,20 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit"
-import { ILanguageSwapping, ISettingsState, languages } from "./types";
+import { createSlice } from '@reduxjs/toolkit';
+import { ISettingsState, languages } from './types';
+import { changeAction } from './actions';
 
 const initialState: ISettingsState = {
-  language: languages.ru,
-}
+	language: languages.ru,
+};
 
 const settingsSlice = createSlice({
-  name: 'settings',
-  initialState,
-  reducers: {
-    changeLanguage(state, action: PayloadAction<ILanguageSwapping>) {
-      state.language = action.payload.langId;
-    }
-  }
-})
+	name: 'settings',
+	initialState,
+	reducers: {
+		changeLanguage(state, action) {
+			changeAction(state, action);
+		},
+	},
+});
 
 export const { changeLanguage } = settingsSlice.actions;
 export default settingsSlice.reducer;

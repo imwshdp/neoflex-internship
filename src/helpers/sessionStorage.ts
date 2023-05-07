@@ -1,26 +1,26 @@
-import { IBasketState } from "store/slices/basket/types";
+import { IBasketState } from 'store/slices/basket/types';
 
 type parsedData = IBasketState | null;
 
-export const updateSessionStorage = (state: IBasketState) => {
-  const key = process.env.REACT_APP_SESSION_STORAGE_KEY;
-  if (key) {
-    sessionStorage.setItem(key, JSON.stringify(state));
-  }
-}
+export const saveBasketToSessionStorage = (state: IBasketState) => {
+	const key = process.env.REACT_APP_SESSION_STORAGE_KEY;
+	if (key) {
+		sessionStorage.setItem(key, JSON.stringify(state));
+	}
+};
 
 export const getDataFromSessionStorage = (): parsedData => {
-  const key = process.env.REACT_APP_SESSION_STORAGE_KEY;
-  let result: parsedData = null;
+	const key = process.env.REACT_APP_SESSION_STORAGE_KEY;
+	let result: parsedData = null;
 
-  // sessionStorage.clear();
+	// sessionStorage.clear();
 
-  if (key) {
-    let data = sessionStorage.getItem(key);
-    if (data) {
-      result = JSON.parse(data);
-    }
-  }
+	if (key) {
+		let data = sessionStorage.getItem(key);
+		if (data) {
+			result = JSON.parse(data);
+		}
+	}
 
-  return result;
-}
+	return result;
+};

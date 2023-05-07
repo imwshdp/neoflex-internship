@@ -1,54 +1,54 @@
 .gridItem {
-  display: flex;
-  flex-flow: column nowrap;
+	display: flex;
+	flex-flow: column nowrap;
 
-  min-height: 400px;
-  padding: 30px;
+	min-height: 400px;
+	padding: 30px;
 
-  font-family: 'SemiBold';
-  font-size: 17px;
+	font-family: 'SemiBold';
+	font-size: 17px;
 
-  background: var(--white-color);
-  border-radius: 30px;
-  box-shadow: var(--shadow);
+	background: var(--white-color);
+	border-radius: 30px;
+	box-shadow: var(--shadow);
 }
 
 .imageWrapper {
-  display: flex;
-  flex: 1 0 auto;
+	display: flex;
+	flex: 1 0 auto;
 }
 
 .gridItem img {
-  max-width: 250px;
-  min-width: 100px;
-  margin: auto auto;
+	max-width: 250px;
+	min-width: 100px;
+	margin: auto auto;
 }
 
 .price {
-  display: flex;
-  align-items: center;
-  color: var(--gray-color);
+	display: flex;
+	align-items: center;
+	color: var(--gray-color);
 }
 
 .oldPrice {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  font-size: .8em;
-  color: var(--second-active-color);
+	position: absolute;
+	top: 20px;
+	right: 0;
+	font-size: 0.8em;
+	color: var(--second-active-color);
 }
 
 .buyButton {
-  background: transparent;
-  border: none;
-  font: inherit;
-  cursor: pointer;
+	background: transparent;
+	border: none;
+	font: inherit;
+	cursor: pointer;
 }
 
-.gridItem>*:last-child {
-  margin-top: 25px;
+.gridItem > *:last-child {
+	margin-top: 25px;
 }
 
-.price>*:last-child {
-  margin-left: 10px;
+.price > *:last-child {
+	margin-left: 10px;
 }

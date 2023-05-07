@@ -1,12 +1,12 @@
 export enum languages {
-  'ru',
-  'en',
+	'ru',
+	'en',
 }
 
 export interface ISettingsState {
-  language: number;
+	language: number;
 }
 
 export interface ILanguageSwapping {
-  langId: number;
+	langId: number;
 }

@@ -1,16 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from '@reduxjs/toolkit';
 import { IProductsState } from './types';
 
 import mockProducts from 'resources/mock/productsData';
 
 const initialState: IProductsState = {
-  productsList: mockProducts,
-}
+	productsList: mockProducts,
+};
 
 const productsSlice = createSlice({
-  name: 'products',
-  initialState,
-  reducers: {}
-})
+	name: 'products',
+	initialState,
+	reducers: {},
+});
 
 export default productsSlice.reducer;

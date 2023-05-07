@@ -6,13 +6,13 @@ import Footer from 'components/Footer';
 import css from './index.module.css';
 
 const Layout: React.FC = () => {
-  return (
-    <div className={css.layout}>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
-  );
-}
+	return (
+		<div className={css.layout}>
+			<Header />
+			<Outlet />
+			<Footer />
+		</div>
+	);
+};
 
 export default Layout;
