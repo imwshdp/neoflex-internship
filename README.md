@@ -2,7 +2,7 @@
 
 Тестовое задание для учебного центра Neoflex (Входные мероприятия Frontend Development (Весенний набор 2023)).
 
-Посмотреть результат [здесь](https://neoflex-intership.vercel.app/).
+Посмотреть результат [здесь](https://neoflex-internship.vercel.app/).
 
 ## Стек
 
